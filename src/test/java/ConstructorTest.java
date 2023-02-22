@@ -38,7 +38,7 @@ public class ConstructorTest {
         MainPage objMainPage = new MainPage(driver);
         objMainPage.clickFillingSection();
         objMainPage.clickBunSection();
-        String actualText = objMainPage.getBunHeader();
+        String actualText = objMainPage.getCurrentSection();
 
         assertEquals(HEADER_SECTION_BUN,actualText);
 
@@ -49,7 +49,7 @@ public class ConstructorTest {
     public void checkGoToSouseSection(){
         MainPage objMainPage = new MainPage(driver);
         objMainPage.clickSouseSection();
-        String actualText = objMainPage.getSouseHeader();
+        String actualText = objMainPage.getCurrentSection();
 
         assertEquals(HEADER_SECTION_SOUSE,actualText);
     }
@@ -59,7 +59,7 @@ public class ConstructorTest {
     public void checkGoToFillingSection(){
         MainPage objMainPage = new MainPage(driver);
         objMainPage.clickFillingSection();
-        String actualText = objMainPage.getFillingHeader();
+        String actualText = objMainPage.getCurrentSection();
 
         assertEquals(HEADER_SECTION_FILLING,actualText);
 

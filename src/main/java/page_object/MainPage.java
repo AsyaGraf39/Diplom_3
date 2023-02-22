@@ -10,11 +10,12 @@ public class MainPage {
     private By loginBtn = By.xpath(".//button[text()='Войти в аккаунт']");
     private By mainHeader = By.xpath(".//h1[text()='Соберите бургер']");
     private By bunSection = By.xpath(".//span[text()='Булки']");
-    private By bunSectionHeader = By.xpath(".//h2[text()='Булки']");
+    //private By bunSectionHeader = By.xpath(".//h2[text()='Булки']");
     private By souseSection = By.xpath(".//span[text()='Соусы']");
-    private By souseSectionHeader = By.xpath(".//h2[text()='Соусы']");
+    //private By souseSectionHeader = By.xpath(".//h2[text()='Соусы']");
     private By fillingSection = By.xpath(".//span[text()='Начинки']");
-    private By fillingSectionHeader = By.xpath(".//h2[text()='Начинки']");
+    //private By fillingSectionHeader = By.xpath(".//h2[text()='Начинки']");
+    private By currentSection = By.xpath(".//div[contains(@class, 'tab_tab_type_current__2BEPc')]/span");
 
     public MainPage(WebDriver driver) {
         this.driver = driver;
@@ -55,18 +56,18 @@ public class MainPage {
         return this;
     }
 
-    @Step("Заголовок раздела Булки")
-    public String getBunHeader(){
-        return driver.findElement(bunSectionHeader).getText();
+    @Step("Заголовок выбранного раздела")
+    public String getCurrentSection(){
+        return driver.findElement(currentSection).getText();
     }
 
-    @Step("Заголовок раздела Соусы")
-    public String getSouseHeader(){
-        return driver.findElement(souseSectionHeader).getText();
-    }
-
-    @Step("Заголовок раздела Начинки")
-    public String getFillingHeader(){
-        return driver.findElement(fillingSectionHeader).getText();
-    }
+//    @Step("Заголовок раздела Соусы")
+//    public String getSouseHeader(){
+//        return driver.findElement(souseSectionHeader).getText();
+//    }
+//
+//    @Step("Заголовок раздела Начинки")
+//    public String getFillingHeader(){
+//        return driver.findElement(fillingSectionHeader).getText();
+//    }
 }
